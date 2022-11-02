@@ -1,4 +1,10 @@
 1、websocket方式
 （1）wscat
+npm install -g wscat
+wscat -c wss://
+
 （2）JavaScript 的 WebSocket
+
+
 （3）python的websocket
+import websocket
