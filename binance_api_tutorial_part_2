@@ -1,0 +1,51 @@
+(1)
+create api in binance
+
+(2)
+npm install -g wscat
+wscat -c wss://stream.binance.com:9443/ws/btcusdt@trade
+{
+  "e":"trade",
+  "E":1667397822499,
+  "s":"BTCUSDT",
+  "t":2075541213,
+  "p":"20396.59000000",
+  "q":"0.00061000",
+  "b":14998107415,
+  "a":14998107355,
+  "T":1667397822499,
+  "m":false,
+  "M":true
+}
+
+wscat -c wss://stream.binance.com:9443/ws/btcusdt@kline_5m | tee dataset.txt
+
+
+<html>
+    <head>
+        <title> Coinviewer</title>
+    </head>
+
+    <h1> Trades </h1>
+    <div id = "trades"> </div>
+
+    <body>
+        <script type="text/javascript" >
+            var ws = new WebSocket("wss://stream.binance.com:9443/ws/ethusdt@trade")
+
+            var trades_div = document.getElementById("trades")
+            
+            ws.onmessage = function(event) {
+                console.log(event.data);
+                var messageObject = JSON.parse(event.data)
+                trades_div.append(messageObject.p)
+            }
+
+
+
+        </script>
+    </body>
+
+
+
+</html>
