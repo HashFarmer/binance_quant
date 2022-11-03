@@ -1,16 +1,34 @@
+
 ///
 
 <html>
     <head>
         <title> Coinviewer</title>
+        <script src = "https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"> </script>
     </head>
 
-    <h1> Trades </h1>
-    <div id = "trades"> </div>
-
     <body>
+        
+        <h1> Trades </h1>
+        <div id = "trades"> </div>
+        <div id = "chart"> </div>
+        <h3>Settings</h3>
+        
+        <div id = "settings">
+            <label> RSI </label>
+            <div>
+                <input type = "checkbox">
+                <input type = "text" id = "rsi_length" name = "rsi_length" placeholder = 15> </input>
+                OverSold
+                <input type = "text" id = "rsi_oversold" name = "rsi_oversold" placeholder = 35> </input>
+                OverBought
+                <input type = "text" id = "rsi_overbought" name = "rsi_overbought" placeholder = 75> </input>
+            </div>
+
+        </div>
+
         <script type="text/javascript" >
-            var ws = new WebSocket("wss://stream.binance.com:9443/ws/ethusdt@trade")
+           // var ws = new WebSocket("wss://stream.binance.com:9443/ws/ethusdt@trade")
 
             var trades_div = document.getElementById("trades")
             
@@ -21,25 +39,29 @@
             }
 
         </script>
-        
+
         <script src = "chart.js"> </script>
-        
-        
+
     </body>
-
-
 
 </html>
 
+
+
+
 ///
-npm install lightweight-charts
 
-
-
-
-
-
-
-
-
-
+const chart = LightweightCharts.createChart(document.getElementById("chart"), { width: 400, height: 300 });
+const lineSeries = chart.addLineSeries();
+lineSeries.setData([
+    { time: '2019-04-11', value: 80.01 },
+    { time: '2019-04-12', value: 96.63 },
+    { time: '2019-04-13', value: 76.64 },
+    { time: '2019-04-14', value: 81.89 },
+    { time: '2019-04-15', value: 74.43 },
+    { time: '2019-04-16', value: 80.01 },
+    { time: '2019-04-17', value: 96.63 },
+    { time: '2019-04-18', value: 76.64 },
+    { time: '2019-04-19', value: 81.89 },
+    { time: '2019-04-20', value: 74.43 },
+]);
