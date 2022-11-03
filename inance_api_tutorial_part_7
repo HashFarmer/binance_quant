@@ -3,4 +3,4 @@ client.get_account()
 
 client.get_exchange_info()
 
-把获取的数据推送到template文件里
+把获取的数据推送到template文件里，即便推送到模板文件里的是一个很大的数据对象，也可以在模板里用模板引擎语言对之进行处理
