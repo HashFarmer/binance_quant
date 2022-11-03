@@ -1,1 +1,45 @@
+///
+
+<html>
+    <head>
+        <title> Coinviewer</title>
+    </head>
+
+    <h1> Trades </h1>
+    <div id = "trades"> </div>
+
+    <body>
+        <script type="text/javascript" >
+            var ws = new WebSocket("wss://stream.binance.com:9443/ws/ethusdt@trade")
+
+            var trades_div = document.getElementById("trades")
+            
+            ws.onmessage = function(event) {
+                console.log(event.data);
+                var messageObject = JSON.parse(event.data)
+                trades_div.append(messageObject.p)
+            }
+
+        </script>
+        
+        <script src = "chart.js"> </script>
+        
+        
+    </body>
+
+
+
+</html>
+
+///
+npm install lightweight-charts
+
+
+
+
+
+
+
+
+
 
