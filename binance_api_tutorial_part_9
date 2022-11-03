@@ -1,0 +1,3 @@
+获取历史数据，写入到一个csv文件，利用这个数据回测策略的效果
+
+import backtrader
