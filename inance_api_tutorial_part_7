@@ -1,2 +1,6 @@
 
 client.get_account()
+
+client.get_exchange_info()
+
+把获取的数据推送到template文件里
