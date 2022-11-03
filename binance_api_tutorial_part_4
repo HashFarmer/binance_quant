@@ -1,0 +1,5 @@
+python-binance中的一些函数
+
+获取历史数据
+
+然后用 csv模块，写入到csv文件里
