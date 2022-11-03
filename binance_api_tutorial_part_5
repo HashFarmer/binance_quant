@@ -1,0 +1,7 @@
+TA-LIb
+
+impor talib
+talib.SMA()
+talib.RSI()
+
+from numpy import genfromtxt
