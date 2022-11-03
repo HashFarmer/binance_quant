@@ -6,3 +6,4 @@ python3 -m pip install numpy
 python3 -m pip install backtrader
 
 
+这一节主要是引入了flask，把 index.html交给flask渲染
