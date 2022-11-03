@@ -5,3 +5,4 @@ talib.SMA()
 talib.RSI()
 
 from numpy import genfromtxt
+genfromtxt #从txt或csv文件里读取数据
