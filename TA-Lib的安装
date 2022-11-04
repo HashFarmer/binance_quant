@@ -1,3 +1,14 @@
 www.lfd.uci.edu下载 .whl文件
 
 
+TA-Lib 在windows下直接使用 pip install TA-Lib 安装失败
+
+正确的安装方法：
+
+到https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
+下载TA_Lib-0.4.24-cp310-cp310-win_amd64.whl
+然后
+pip install TA_Lib-0.4.24-cp310-cp310-win_amd64.whl
+
+使用：
+import talib
