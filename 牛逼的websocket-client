@@ -1,0 +1,5 @@
+// websocket-client
+
+pip install websocket-client
+
+https://websocket-client.readthedocs.io/en/latest/examples.html
