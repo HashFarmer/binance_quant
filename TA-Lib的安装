@@ -1,4 +1,4 @@
-www.lfd.uci.edu下载 .whl文件
+// windows
 
 
 TA-Lib 在windows下直接使用 pip install TA-Lib 安装失败
@@ -12,3 +12,16 @@ pip install TA_Lib-0.4.24-cp310-cp310-win_amd64.whl
 
 使用：
 import talib
+
+
+
+
+// linux-ubuntu
+
+$ tar -xzf ta-lib-0.4.0-src.tar.gz
+$ cd ta-lib/
+$ ./configure --prefix=/usr
+$ make
+$ sudo make install
+
+$ python3 -m pip install TA-Lib
