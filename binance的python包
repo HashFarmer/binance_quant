@@ -1,5 +1,6 @@
 
 # 1
+# 完整使用教程：https://python-binance.readthedocs.io/en/latest/
 
 from binance.client import Client
 
