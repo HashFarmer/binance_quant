@@ -16,6 +16,7 @@ in_position = False
 
 client = Client(config.API_KEY, config.API_SECRET, tld='us')
 
+# 包裹官方的下单函数
 def order(side, quantity, symbol,order_type=ORDER_TYPE_MARKET):
     try:
         print("sending order")
