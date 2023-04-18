@@ -81,6 +81,6 @@ def on_message(ws, message):
                     if order_succeeded:
                         in_position = True
 
-                
+# 只是用到了官方的websocket源，监听用的是websocket包                
 ws = websocket.WebSocketApp(SOCKET, on_open=on_open, on_close=on_close, on_message=on_message)
 ws.run_forever()
